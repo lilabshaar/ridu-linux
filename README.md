@@ -1,7 +1,3 @@
-Berikut adalah contoh **`README.md`** untuk proyek **RIDU Linux**, distro pembelajaran hacking dan CTF bagi mahasiswa UNHAN dan pemula keamanan siber:
-
----
-
 # RIDU Linux 🇮🇩🐧
 
 **Distro Linux Edukasi Hacking & CTF untuk Mahasiswa**
@@ -94,16 +90,3 @@ Kami sangat terbuka dengan masukan dan kontribusi, baik berupa:
 * Penambahan script/tools
 * Dokumentasi
 * Menu tambahan
-
----
-
-## 📫 Kontak
-
-Untuk ide, pertanyaan, atau kerja sama:
-
-> 📧 [ulil.ridu@unhan.ac.id](mailto:ulil.ridu@unhan.ac.id) (contoh)
-> 🐙 GitHub: [github.com/ridulinux](https://github.com/ridulinux)
-
----
-
-Kalau kamu butuh script `ridu-menu.sh` dan semua `modules/*.sh`, beri tahu saja — saya siap buatkan satu per satu sesuai urutan dan rapi.
