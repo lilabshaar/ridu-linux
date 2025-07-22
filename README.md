@@ -1,92 +1,110 @@
-# RIDU Linux 🇮🇩🐧
-
-**Distro Linux Edukasi Hacking & CTF untuk Mahasiswa**
 
 ---
 
-## 🧠 Apa itu RIDU Linux?
+### 📄 `README.md`
 
-**RIDU Linux** adalah distribusi Linux yang dirancang khusus untuk mahasiswa UNHAN (Universitas Pertahanan Indonesia) dan pemula yang ingin belajar dasar-dasar keamanan siber, hacking, dan Capture The Flag (CTF).
-Dikembangkan dengan fokus pada **kemudahan penggunaan**, **bahasa Indonesia**, dan **menu interaktif CLI**, RIDU Linux menyediakan berbagai tools umum yang dibutuhkan dalam dunia ethical hacking — mulai dari scanning, OSINT, hingga cryptography dan steganography.
+```markdown
+# RIDU Linux - UNHAN Edition
 
----
-
-## 📦 Fitur Utama
-
-| Kategori           | Tools yang Tersedia                                        |
-| ------------------ | ---------------------------------------------------------- |
-| 🕵️ Reconnaissance | Nmap, WhatWeb, Netdiscover, Wget                           |
-| 🔎 OSINT           | TheHarvester, Sherlock, Emailfinder, Censys API (opsional) |
-| 🔐 Cryptography    | Encoder/Decoder: Base64, Hex, ROT13, Caesar, XOR, Hashing  |
-| 🖼️ Steganography  | Steghide, Zsteg, Binwalk, Strings Analysis                 |
-| 💥 Exploitation    | Metasploit, Searchsploit, PwnTools (opsional)              |
-| 🌐 Networking      | Curl, HTTPie, Netcat, Python HTTP server                   |
-| 🧰 Utilities       | Python script launcher, Auto-updater, Menu Bash interaktif |
+**RIDU Linux** adalah proyek open-source dari mahasiswa Universitas Pertahanan (UNHAN) yang bertujuan menyediakan platform edukatif untuk belajar dasar-dasar *hacking* dan *Capture The Flag (CTF)*. Proyek ini **bukan sebuah sistem operasi baru (distro Linux)**, melainkan sebuah _interface_ berbasis script Bash yang berjalan di sistem Linux (seperti Kali Linux, Parrot, atau Debian/Ubuntu biasa).
 
 ---
 
-## 🚀 Cara Menjalankan Menu Interaktif
+## 🎯 Tujuan
+Memberikan antarmuka interaktif dan terstruktur untuk membantu mahasiswa:
+- Mengenal tools dan teknik dasar dalam dunia keamanan siber
+- Belajar secara bertahap dari *Reconnaissance*, *OSINT*, *Cryptography*, hingga *Steganography*
+- Praktik langsung dengan tools yang umum dipakai di kompetisi CTF
 
-1. Pastikan kamu sudah berada di terminal RIDU Linux.
-2. Jalankan perintah berikut:
+---
 
-```bash
-chmod +x ridu-menu.sh
-./ridu-menu.sh
+## 📁 Struktur Folder
+
 ```
 
-Menu interaktif akan terbuka dan kamu bisa memilih opsi dengan angka.
-
----
-
-## 📁 Struktur File
-
-```
-ridu-linux/
-├── ridu-menu.sh       # Menu utama interaktif berbasis Bash
-├── modules/
+RIDU-Linux/
+├── ridu.sh             # Script utama (menu interaktif)
+├── install.sh          # Script untuk install tools yang dibutuhkan
+├── modules/            # Berisi file .sh untuk setiap submenu
 │   ├── reconnaissance.sh
 │   ├── osint.sh
 │   ├── cryptography.sh
-│   ├── steganography.sh
-│   └── exploitation.sh
-├── README.md
-└── install.sh         # (Opsional) Script instalasi tools
-```
+│   └── steganography.sh
+
+````
+
+> Folder `tools/` akan dibuat secara otomatis saat install jika kamu belum menambahkannya.
 
 ---
 
-## 🛠️ Instalasi Tools (Opsional)
+## 🚀 Cara Menjalankan
 
-Untuk menginstal semua tools yang direkomendasikan dalam RIDU Linux:
-
+### 1. Install dependensi terlebih dahulu
 ```bash
 chmod +x install.sh
 ./install.sh
+````
+
+### 2. Jalankan menu utama
+
+```bash
+chmod +x ridu.sh
+./ridu.sh
 ```
 
 ---
 
-## 🎯 Target Pengguna
+## 🧰 Tools yang Disiapkan
 
-* Mahasiswa UNHAN
-* Siswa SMK/SMA IT
-* Penggemar CTF pemula
-* Siapa pun yang ingin belajar hacking secara aman dan legal
+**Berikut beberapa tools dan teknik yang tersedia per menu:**
+
+### 🔎 1. Reconnaissance
+
+* `whois`
+* `dig`
+* `nslookup`
+* `nmap`
+
+### 🌐 2. OSINT
+
+* Pencarian metadata dari file
+* Cek profil username
+* PhoneInfoga (opsional)
+
+### 🔐 3. Cryptography
+
+* Konversi Base64, ROT13
+* Encode/decode string
+* Pemahaman dasar hashing
+
+### 🖼 4. Steganography
+
+* `strings` untuk cek data tersembunyi
+* `binwalk` untuk ekstrak file dalam file gambar
+* `steghide` untuk menyisipkan/ambil data di gambar/audio
 
 ---
 
-## 🧩 Legal & Etika
+## ⚠️ Catatan
 
-RIDU Linux hanya ditujukan untuk **pembelajaran legal dan etis**.
-Jangan gunakan tools dalam distro ini untuk aktivitas yang melanggar hukum.
+* Script ini cocok untuk mahasiswa/i UNHAN atau pemula yang ingin belajar hacking secara terstruktur.
+* Script ini **tidak berbahaya**, tetapi pengguna tetap harus paham dan bertanggung jawab atas penggunaan tool yang tersedia.
+* Direkomendasikan untuk dijalankan di Kali Linux atau distro yang sudah memiliki banyak tools hacking.
 
 ---
 
-## ✍️ Kontribusi
+## 🤝 Kontribusi
 
-Kami sangat terbuka dengan masukan dan kontribusi, baik berupa:
+Masih banyak ruang pengembangan, seperti:
 
-* Penambahan script/tools
-* Dokumentasi
-* Menu tambahan
+* Penambahan challenge per topik
+* Modul tambahan (Reverse Engineering, Forensics, Web Exploitation, dll)
+* GUI interface ke depannya
+
+Silakan kontribusi atau fork repositori ini jika ingin mengembangkan lebih lanjut!
+
+---
+
+## 📧 Kontak
+
+> Proyek ini dibuat oleh mahasiswa Universitas Pertahanan sebagai media pembelajaran terbuka.
