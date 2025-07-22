@@ -1,6 +1,6 @@
 # RIDU Linux - UNHAN Edition 🛡️🐧
 
-**RIDU Linux** adalah antarmuka terminal berbasis Bash Shell yang dikembangkan khusus untuk mahasiswa Universitas Pertahanan (UNHAN) guna mendalami dunia keamanan siber dan Capture The Flag (CTF). Proyek ini bukanlah sebuah distro baru, tetapi koleksi terorganisir dari skrip pembelajaran CTF yang dapat dijalankan di sistem Linux seperti Kali, Parrot, atau Ubuntu.
+**RIDU Linux** adalah antarmuka terminal berbasis Bash Shell yang dikembangkan khusus dari mahasiswa Universitas Pertahanan (UNHAN) guna mendalami dunia keamanan siber dan Capture The Flag (CTF). Proyek ini bukanlah sebuah distro baru, tetapi koleksi terorganisir dari skrip pembelajaran CTF yang dapat dijalankan di sistem Linux seperti Kali, Parrot, atau Ubuntu.
 
 ---
 
