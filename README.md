@@ -1,51 +1,51 @@
+# RIDU Linux - UNHAN Edition 🛡️🐧
 
----
-
-### 📄 `README.md`
-
-```markdown
-# RIDU Linux - UNHAN Edition
-
-**RIDU Linux** adalah proyek open-source dari mahasiswa Universitas Pertahanan (UNHAN) yang bertujuan menyediakan platform edukatif untuk belajar dasar-dasar *hacking* dan *Capture The Flag (CTF)*. Proyek ini **bukan sebuah sistem operasi baru (distro Linux)**, melainkan sebuah _interface_ berbasis script Bash yang berjalan di sistem Linux (seperti Kali Linux, Parrot, atau Debian/Ubuntu biasa).
+**RIDU Linux** adalah antarmuka terminal berbasis Bash Shell yang dikembangkan khusus untuk mahasiswa Universitas Pertahanan (UNHAN) guna mendalami dunia keamanan siber dan Capture The Flag (CTF). Proyek ini bukanlah sebuah distro baru, tetapi koleksi terorganisir dari skrip pembelajaran CTF yang dapat dijalankan di sistem Linux seperti Kali, Parrot, atau Ubuntu.
 
 ---
 
 ## 🎯 Tujuan
-Memberikan antarmuka interaktif dan terstruktur untuk membantu mahasiswa:
-- Mengenal tools dan teknik dasar dalam dunia keamanan siber
-- Belajar secara bertahap dari *Reconnaissance*, *OSINT*, *Cryptography*, hingga *Steganography*
-- Praktik langsung dengan tools yang umum dipakai di kompetisi CTF
+
+RIDU Linux dirancang untuk:
+- Menjadi media belajar dasar-dasar CTF secara praktis
+- Menyediakan menu interaktif untuk mengenal tools penting
+- Menyusun materi berdasarkan kategori CTF secara bertahap
 
 ---
 
-## 📁 Struktur Folder
+## 🗂️ Struktur Direktori
 
 ```
 
 RIDU-Linux/
-├── ridu.sh             # Script utama (menu interaktif)
-├── install.sh          # Script untuk install tools yang dibutuhkan
-├── modules/            # Berisi file .sh untuk setiap submenu
-│   ├── reconnaissance.sh
-│   ├── osint.sh
-│   ├── cryptography.sh
-│   └── steganography.sh
+├── install.sh          # Script untuk menginstal semua tools yang dibutuhkan
+├── ridu.sh             # Script utama - menu utama CLI
+└── modules/            # Modul per kategori materi
+├── reconnaissance.sh
+├── osint.sh
+├── cryptography.sh
+└── steganography.sh
 
 ````
-
-> Folder `tools/` akan dibuat secara otomatis saat install jika kamu belum menambahkannya.
 
 ---
 
 ## 🚀 Cara Menjalankan
 
-### 1. Install dependensi terlebih dahulu
+### 1. Clone & Masuk Folder
+```bash
+git clone https://github.com/kamu/ridu-linux.git
+cd ridu-linux
+````
+
+### 2. Instalasi Tools
+
 ```bash
 chmod +x install.sh
 ./install.sh
-````
+```
 
-### 2. Jalankan menu utama
+### 3. Jalankan Menu Utama
 
 ```bash
 chmod +x ridu.sh
@@ -54,57 +54,58 @@ chmod +x ridu.sh
 
 ---
 
-## 🧰 Tools yang Disiapkan
+## 📚 Fitur Menu
 
-**Berikut beberapa tools dan teknik yang tersedia per menu:**
+| No | Menu           | Isi Modul                                                                 |
+| -- | -------------- | ------------------------------------------------------------------------- |
+| 1  | Reconnaissance | `whois`, `dig`, `nslookup`, `nmap`, `wget`, `curl`                        |
+| 2  | OSINT          | Cek username, metadata file, phone lookup, Google dorks                   |
+| 3  | Cryptography   | Encode/decode (Base64, ROT13), hash converter, brute simple Caesar Cipher |
+| 4  | Steganography  | Navigasi direktori file, `strings`, `binwalk`, `steghide`, `zsteg`        |
 
-### 🔎 1. Reconnaissance
+---
 
-* `whois`
-* `dig`
-* `nslookup`
-* `nmap`
+## 🧰 Tools yang Diinstal Otomatis
 
-### 🌐 2. OSINT
+Beberapa tools akan diinstall melalui `install.sh`, di antaranya:
 
-* Pencarian metadata dari file
-* Cek profil username
-* PhoneInfoga (opsional)
+* `nmap`, `whois`, `dig`, `curl`, `wget`
+* `binwalk`, `steghide`, `zsteg`, `exiftool`
+* `python3`, `jq`, `hashcat` (opsional)
 
-### 🔐 3. Cryptography
-
-* Konversi Base64, ROT13
-* Encode/decode string
-* Pemahaman dasar hashing
-
-### 🖼 4. Steganography
-
-* `strings` untuk cek data tersembunyi
-* `binwalk` untuk ekstrak file dalam file gambar
-* `steghide` untuk menyisipkan/ambil data di gambar/audio
+> Tools akan dicek sebelum diinstall untuk menghindari duplikasi.
 
 ---
 
 ## ⚠️ Catatan
 
-* Script ini cocok untuk mahasiswa/i UNHAN atau pemula yang ingin belajar hacking secara terstruktur.
-* Script ini **tidak berbahaya**, tetapi pengguna tetap harus paham dan bertanggung jawab atas penggunaan tool yang tersedia.
-* Direkomendasikan untuk dijalankan di Kali Linux atau distro yang sudah memiliki banyak tools hacking.
+* Script ini hanya **frontend terminal edukatif**, bukan sistem operasi utuh.
+* Direkomendasikan menggunakan distro Linux yang mendukung tools pentesting (seperti Kali Linux).
+* Gunakan secara bertanggung jawab. Ini bukan alat untuk peretasan ilegal, tetapi untuk pembelajaran.
 
 ---
 
 ## 🤝 Kontribusi
 
-Masih banyak ruang pengembangan, seperti:
+> Proyek ini bersifat terbuka untuk dikembangkan lebih lanjut.
 
-* Penambahan challenge per topik
-* Modul tambahan (Reverse Engineering, Forensics, Web Exploitation, dll)
-* GUI interface ke depannya
+Kamu bisa ikut menambahkan:
 
-Silakan kontribusi atau fork repositori ini jika ingin mengembangkan lebih lanjut!
+* Modul baru (Web Exploitation, Forensics, Reversing, dll.)
+* Soal-soal mini CTF per kategori
+* GUI berbasis Python (Tkinter/curses) untuk versi selanjutnya
 
 ---
 
-## 📧 Kontak
+## 📫 Kontak
 
-> Proyek ini dibuat oleh mahasiswa Universitas Pertahanan sebagai media pembelajaran terbuka.
+Dikembangkan oleh Mahasiswa Informatika UNHAN
+Hubungi: \[Telegram atau Email jika ingin ditambahkan di masa depan]
+
+---
+
+## 🧪 Status
+
+🚧 Proyek dalam tahap awal pengembangan. Versi Alpha.
+
+```
